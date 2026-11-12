@@ -28,7 +28,7 @@ public class TemperaturaDAO {
 			throw new Exception("O valor passado nao pode ser nulo");
 		try {
 			String SQL = "INSERT INTO tbTemp"
-					+ "(celsius, nome, dataTemp) values(?, ?, ?)";
+					+ "(celsius, nome, dataTemperatura) values(?, ?, ?)";
 			ps = conn.prepareStatement(SQL);
 			ps.setDouble(1, temp.getCelsius());
 			ps.setString(2, temp.getNome());

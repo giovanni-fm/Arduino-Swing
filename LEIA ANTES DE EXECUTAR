@@ -1,0 +1,11 @@
+Esse programa ele é um pouco problemático, então vai aqui algumas instruções antes de executa-lo (WINDOWS x86x64).
+
+1 - Primeiro, com um ARDUINO, execute o arquivo .ino para salvar a execução do programa dentro dele (fique a seu critério como voce vai fazer isso);
+2 - Crie o banco de dados bdtemperatura e a tabela tbTemp no XAMPP, para evitar erros de MySQL;
+3 (importante!!!) - O TelaTemp.class vai dar erro de acesso negado na pasta do JSerialComm, então para contornar isso voce vai: 
+  - Criar uma pasta jserial no C: (o caminho tem que ser esse: C:\jserial)
+  - Descompacte o arquivo .jar do JSerialComm (com WinRar) e pegue a DLL na pasta x86x64
+  - Jogue-a na pasta jserial
+  - Pelo Windows Defender, adicione uma exclusão (Proteção contra vírus > Gerenciar configurações > Adicionar ou remover exclusões) tanto na pasta jserial, quanto no arquivo .DLL
+  - Dentro do Eclipse, vá em Run Configuration > Arguments > VM arguments, e coloque -Djava.library.path=C:\jserial
+4 - Rode o programa.
